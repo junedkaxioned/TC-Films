@@ -131,6 +131,7 @@ html.stop-scroll {
   display: none;
 }
 
+/* Header CSS Start */
 header {
   padding: 26px 0 18px;
 }
@@ -303,5 +304,210 @@ header .wrapper {
   -ms-transform: translateY(-7px) rotate(45deg);
   transform: translateY(-7px) rotate(45deg);
 }
+
+/* Header CSS End */
+/* Banner CSS Start */
+.banner-section .wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.banner-sliders {
+  width: 77%;
+}
+.banner-sliders .slider {
+  position: relative;
+}
+.banner-sliders .slider::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.banner-sliders .slider figure {
+  position: relative;
+}
+.banner-sliders .slider figure::before {
+  content: "\f04b";
+  width: 88px;
+  height: 88px;
+  border: 2px solid #F0F0F0;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  top: 42.5%;
+  left: 45.8%;
+  color: #F0F0F0;
+  cursor: pointer;
+  font-family: "FontAwesome";
+  font-size: 32px;
+  -webkit-transform: translate -50%, -50%;
+  -ms-transform: translate -50%, -50%;
+  transform: translate -50%, -50%;
+}
+.banner-content {
+  width: 100%;
+  height: 100%;
+  padding: 80px 40px 40px 75px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.banner-content h2 {
+  color: #F0F0F0;
+  font-size: 68px;
+  font-weight: 700;
+}
+.banner-content p {
+  padding: 35px 0;
+  color: #F0F0F0;
+  max-width: 380px;
+  width: 100%;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.banner-social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  right: 4%;
+  bottom: 10%;
+}
+.banner-social-icons span {
+  margin-right: 20px;
+  color: #F0F0F0;
+  font-size: 18px;
+}
+.banner-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.banner-icons .icon {
+  margin-right: 16px;
+}
+.banner-icons .icon a {
+  text-indent: -99999px;
+}
+.banner-icons .icon a::before {
+  width: 26px;
+  height: 26px;
+  border: 1px solid #F0F0F0;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  float: left;
+  content: "";
+  color: #F0F0F0;
+  font-family: "FontAwesome";
+  font-size: 15px;
+  text-indent: 0;
+}
+.banner-icons .icon:last-child {
+  margin-right: 0;
+}
+.banner-icons li:nth-child(1) a::before {
+  content: "\f39e";
+}
+.banner-icons li:nth-child(2) a::before {
+  content: "\f099";
+}
+.banner-icons li:nth-child(3) a::before {
+  content: "\f232";
+}
+.banner-icons li:nth-child(4) a::before {
+  content: "+";
+}
+
+.aside-container {
+  width: 23%;
+  background-color: #47484B;
+}
+.aside-sliders {
+  max-height: 583px;
+  width: 100%;
+  padding: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+.aside-sliders .slider {
+  margin-bottom: 14px;
+  cursor: pointer;
+}
+.aside-sliders .slider figure {
+  position: relative;
+}
+.aside-sliders .slider figure::before {
+  content: "\f04b";
+  width: 56px;
+  height: 56px;
+  border: 2px solid #F0F0F0;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  color: #F0F0F0;
+  font-family: "FontAwesome";
+  font-size: 32px;
+  -webkit-transform: translate -50%, -50%;
+  -ms-transform: translate -50%, -50%;
+  transform: translate -50%, -50%;
+}
+.aside-sliders .slider figure::before {
+  display: none;
+}
+.aside-sliders .slider:hover figure::before {
+  display: flex;
+}
+
+.slider-btn {
+  display: none;
+}
+
+/* Banner CSS End */
 
 /*# sourceMappingURL=style.css.map */

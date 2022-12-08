@@ -1,3 +1,5 @@
+/* Header CSS Start */
+
 header {
   padding: 26px 0 18px;
 
@@ -68,7 +70,7 @@ header {
                 }
               }
 
-              @include icons-content ($social-icons)
+              @include icons-content ($social-icons);
             }
 
             @at-root .language {
@@ -149,3 +151,5 @@ header {
     }
   }
 }
+
+/* Header CSS End */
