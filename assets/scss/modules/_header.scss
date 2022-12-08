@@ -27,10 +27,6 @@ header {
                 padding: 13px 26px;
                 color: $darkgrey;
                 text-transform: uppercase;
-
-                &:hover {
-                  color: $blue;
-                }
               }
 
               &.active {
@@ -150,6 +146,42 @@ header {
       }
     }
   }
+
+  /* Hover Effects Media Query Start */
+  @include responsiveMin (995px) {
+    @at-root .nav-lists {
+      .list {
+        a {
+          &:hover {
+            color: $blue;
+          }
+        }
+      }
+    }
+
+    @at-root .social-icons {
+      .icon {
+        a {
+          &:hover::before {
+            border-color: $blue;
+            background-color: $blue;
+            color: $white;
+          }
+        }
+      }
+    }
+
+    @at-root .language {
+      a {
+        &:hover {
+          color: $darkgrey;
+        }
+      }
+    }
+  }
+
+  /* Hover Effects Media Query End */
+
 }
 
 /* Header CSS End */

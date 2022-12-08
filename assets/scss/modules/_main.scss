@@ -5,6 +5,8 @@
     @include display-flex ();
 
     @at-root {
+
+      // Banner Slider
       .banner-sliders {
         width: 77%;
 
@@ -104,6 +106,7 @@
         }
       }
 
+      // Aside Container
       .aside-container {
         width: 23%;
         background-color: $darkgrey;
@@ -142,13 +145,15 @@
                 }
               }
 
-              &:hover {
-                figure {
-                  &::before {
-                    display: flex;
-                  }
-                }
-              }
+            }
+
+            &::-webkit-scrollbar {
+              width: 5px;
+              height: 5px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+              background-color: $grey;
             }
 
           }
@@ -189,7 +194,7 @@
           border: 2px solid $white;
           border-radius: 50%;
           @include flexbox (flex, center, $justify:center);
-          @include positions (absolute,  $top:28%, $left:37%);
+          @include positions (absolute, $top:28%, $left:37%);
           color: $white;
           cursor: pointer;
           font-family: "FontAwesome";
@@ -219,19 +224,11 @@
           padding: 14px 30px;
           border: none;
           border-radius: 50px;
-          @include positions (absolute, $left:0, $bottom:18px); 
+          @include positions (absolute, $left:0, $bottom:18px);
           background-color: $blue;
           color: $white;
           font-weight: $semi-bold;
-
-          position: absolute;
-          bottom: 18px;
-          left: 0;
           text-transform: uppercase;
-
-          &:hover {
-            background-color: darken($blue, 15%);
-          }
         }
       }
 
@@ -240,6 +237,40 @@
       }
     }
   }
+
+  /* Hover Effects Media Query Start */
+  @include responsiveMin (995px) {
+    @at-root .aside-sliders {
+      .slider {
+        &:hover {
+          figure {
+            &::before {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+
+    @at-root .banner-icons {
+      .icon {
+        a {
+          &:hover::before {
+            border-color: $blue;
+            background-color: $blue;
+          }
+        }
+      }
+    }
+
+    @at-root .btn {
+      &:hover {
+        background-color: darken($blue, 15%);
+      }
+    }
+  }
+
+  /* Hover Effects Media Query End */
 
 }
 

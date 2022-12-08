@@ -134,6 +134,8 @@ html.stop-scroll {
 /* Header CSS Start */
 header {
   padding: 26px 0 18px;
+  /* Hover Effects Media Query Start */
+  /* Hover Effects Media Query End */
 }
 header .wrapper {
   width: 92.5%;
@@ -174,9 +176,6 @@ header .wrapper {
   padding: 13px 26px;
   color: #47484B;
   text-transform: uppercase;
-}
-.nav-lists .list a:hover {
-  color: #3FADF2;
 }
 .nav-lists .list.active a {
   color: #3FADF2;
@@ -303,6 +302,20 @@ header .wrapper {
   -webkit-transform: translateY(-7px) rotate(45deg);
   -ms-transform: translateY(-7px) rotate(45deg);
   transform: translateY(-7px) rotate(45deg);
+}
+
+@media only screen and (min-width: 995px) {
+  .nav-lists .list a:hover {
+    color: #3FADF2;
+  }
+  .social-icons .icon a:hover::before {
+    border-color: #3FADF2;
+    background-color: #3FADF2;
+    color: #F0F0F0;
+  }
+  .language a:hover {
+    color: #47484B;
+  }
 }
 
 /* Header CSS End */
@@ -502,8 +515,12 @@ header .wrapper {
 .aside-sliders .slider figure::before {
   display: none;
 }
-.aside-sliders .slider:hover figure::before {
-  display: flex;
+.aside-sliders::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.aside-sliders::-webkit-scrollbar-thumb {
+  background-color: #979799;
 }
 
 .slider-btn {
@@ -514,6 +531,8 @@ header .wrapper {
 /* Detail Section CSS Start */
 .detail-section {
   padding: 52px 0 98px;
+  /* Hover Effects Media Query Start */
+  /* Hover Effects Media Query End */
 }
 .detail-cards {
   display: -webkit-box;
@@ -582,22 +601,31 @@ header .wrapper {
   background-color: #3FADF2;
   color: #F0F0F0;
   font-weight: 600;
-  position: absolute;
-  bottom: 18px;
-  left: 0;
   text-transform: uppercase;
-}
-.btn:hover {
-  background-color: #0e89d6;
 }
 
 .card:nth-child(3n) {
   margin-right: 0;
 }
 
+@media only screen and (min-width: 995px) {
+  .aside-sliders .slider:hover figure::before {
+    display: flex;
+  }
+  .banner-icons .icon a:hover::before {
+    border-color: #3FADF2;
+    background-color: #3FADF2;
+  }
+  .btn:hover {
+    background-color: #0e89d6;
+  }
+}
+
 /* Banner Section CSS End */
 footer {
   background-color: #E0E0E1;
+  /* Hover Effects Media Query Start */
+  /* Hover Effects Media Query End */
 }
 footer .wrapper {
   width: 92.5%;
@@ -653,9 +681,6 @@ footer .wrapper {
   padding: 10px 0;
   color: #47484B;
   font-size: 14px;
-}
-.menu-list .list a:hover {
-  color: #3FADF2;
 }
 .menu-list .list.active a {
   color: #3FADF2;
@@ -797,13 +822,35 @@ footer .wrapper {
   color: #47484B;
   font-size: 12px;
 }
-.terms-privacy .list a:hover {
-  color: #3FADF2;
-}
 
 .copyright-para {
   color: #47484B;
   font-size: 12px;
+}
+
+@media only screen and (min-width: 995px) {
+  .menu-list .list a:hover {
+    color: #3FADF2;
+  }
+  .footer-social-icons .icon a:hover {
+    color: #3FADF2;
+  }
+  .footer-social-icons .icon a:hover::before {
+    border-color: #3FADF2;
+    background-color: #3FADF2;
+    color: #F0F0F0;
+  }
+  .contact-block a:hover {
+    color: #3FADF2;
+  }
+  .contact-block a:hover::before {
+    border-color: #3FADF2;
+    background-color: #3FADF2;
+    color: #F0F0F0;
+  }
+  .terms-privacy a:hover {
+    color: #3FADF2;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

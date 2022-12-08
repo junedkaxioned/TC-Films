@@ -16,15 +16,15 @@ footer {
           padding: 10px 55px 10px 0;
           border-right: 2px solid lighten($grey, 15%);
 
-         @include flexbox (flex, center, $direction:column, $justify:center);
+          @include flexbox (flex, center, $direction:column, $justify:center);
 
-         span {
-          padding: 20px 0;
-          display: block;
-          color: $black;
-          font-size: $small;
-          font-weight: $bold;
-         }
+          span {
+            padding: 20px 0;
+            display: block;
+            color: $black;
+            font-size: $small;
+            font-weight: $bold;
+          }
         }
 
         @at-root .menu-links {
@@ -38,25 +38,22 @@ footer {
 
             .list {
               width: 50%;
+
               a {
                 padding: 10px 0;
                 color: $darkgrey;
                 font-size: $small;
-
-                &:hover {
-                  color: $blue;
-                }
               }
 
               &.active {
                 a {
-                    color: $blue;
+                  color: $blue;
                 }
               }
             }
 
           }
-          
+
         }
 
         @at-root .footer-social-block {
@@ -74,34 +71,35 @@ footer {
             margin-top: 10px;
             @include flexbox (flex, $direction:column);
 
-              .icon {
-                a {
-                  padding: 5px 0;
-                  @include flexbox (flex, center);
-                  color: $darkgrey;
-                  font-size: $small;
-                  text-transform: capitalize;
+            .icon {
+              a {
+                padding: 5px 0;
+                @include flexbox (flex, center);
+                color: $darkgrey;
+                font-size: $small;
+                text-transform: capitalize;
 
-                  &::before {
-                    width: 26px;
-                    height: 26px;
-                    border: 1px solid $grey;
-                    border-radius: 50%;
-                    margin-right: 18px;
-                    @include flexbox (flex, center, $justify:center);
-                    float: left;
-                    @include icons ('', $grey, 15px);
-                  }
+                &::before {
+                  width: 26px;
+                  height: 26px;
+                  border: 1px solid $grey;
+                  border-radius: 50%;
+                  margin-right: 18px;
+                  @include flexbox (flex, center, $justify:center);
+                  float: left;
+                  @include icons ('', $grey, 15px);
                 }
               }
-              @include icons-content ($social-icons);
+            }
+
+            @include icons-content ($social-icons);
 
           }
         }
 
         @at-root .contact-block {
           width: 25%;
-          padding: 0 0 0 70px ;
+          padding: 0 0 0 70px;
 
           h4 {
             color: $darkgrey;
@@ -136,27 +134,24 @@ footer {
           }
         }
       }
-  
+
       .bottom-footer {
         padding: 30px 0;
         @include flexbox (flex, center, $justify:space-between);
 
         @at-root .terms-privacy {
-         @include flexbox (flex, center);
+          @include flexbox (flex, center);
 
           .list {
             margin-right: 30px;
+
             a {
               color: $darkgrey;
               font-size: $extra-small;
-
-              &:hover {
-                color: $blue;
-              }
             }
           }
         }
-  
+
         @at-root .copyright-para {
           color: $darkgrey;
           font-size: $extra-small;
@@ -164,5 +159,59 @@ footer {
       }
     }
   }
+
+  /* Hover Effects Media Query Start */
+
+  @include responsiveMin (995px) {
+    @at-root .menu-list {
+      .list {
+        a {
+          &:hover {
+            color: $blue;
+          }
+        }
+      }
+    }
+
+    @at-root .footer-social-icons {
+      .icon {
+        a {
+          &:hover {
+            color: $blue;
+          }
+
+          &:hover::before {
+            border-color: $blue;
+            background-color: $blue;
+            color: $white;
+          }
+        }
+      }
+    }
+
+    @at-root .contact-block {
+      a {
+        &:hover {
+          color: $blue;
+        }
+
+        &:hover::before {
+          border-color: $blue;
+          background-color: $blue;
+          color: $white;
+        }
+      }
+    }
+
+    @at-root .terms-privacy {
+      a {
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+  }
+
+  /* Hover Effects Media Query End */
 
 }
