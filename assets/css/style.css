@@ -317,6 +317,7 @@ header .wrapper {
   width: 77%;
 }
 .banner-sliders .slider {
+  height: 100%;
   position: relative;
 }
 .banner-sliders .slider::before {
@@ -327,6 +328,7 @@ header .wrapper {
   background-color: rgba(0, 0, 0, 0.3);
 }
 .banner-sliders .slider figure {
+  height: 100%;
   position: relative;
 }
 .banner-sliders .slider figure::before {
@@ -509,5 +511,90 @@ header .wrapper {
 }
 
 /* Banner CSS End */
+/* Detail Section CSS Start */
+.detail-section {
+  padding: 52px 0 98px;
+}
+.detail-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  padding-bottom: 60px;
+  width: 29.85%;
+  margin-right: 5.2%;
+  margin-top: 60px;
+  position: relative;
+}
+.card figure {
+  position: relative;
+}
+.card figure::before {
+  content: "\f04b";
+  width: 88px;
+  height: 88px;
+  border: 2px solid #F0F0F0;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  top: 28%;
+  left: 37%;
+  color: #F0F0F0;
+  cursor: pointer;
+  font-family: "FontAwesome";
+  font-size: 32px;
+  -webkit-transform: translate -50%, -50%;
+  -ms-transform: translate -50%, -50%;
+  transform: translate -50%, -50%;
+}
+.card-details {
+  padding: 24px 0 10px;
+}
+.card-details h3 {
+  color: #38393D;
+  font-size: 38px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.card-details p {
+  padding: 10px 0;
+  color: #979799;
+  font-size: 20px;
+  line-height: 1.6;
+}
+.btn {
+  padding: 14px 30px;
+  border: none;
+  border-radius: 50px;
+  position: absolute;
+  bottom: 18px;
+  left: 0;
+  background-color: #3FADF2;
+  color: #F0F0F0;
+  font-weight: 600;
+  position: absolute;
+  bottom: 18px;
+  left: 0;
+  text-transform: uppercase;
+}
+.btn:hover {
+  background-color: #0e89d6;
+}
+
+.card:nth-child(3n) {
+  margin-right: 0;
+}
+
+/* Banner Section CSS End */
 
 /*# sourceMappingURL=style.css.map */

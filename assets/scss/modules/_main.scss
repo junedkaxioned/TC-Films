@@ -9,6 +9,7 @@
         width: 77%;
 
         .slider {
+          height: 100%;
           position: relative;
 
           &::before {
@@ -20,6 +21,7 @@
           }
 
           figure {
+            height: 100%;
             position: relative;
 
             &::before {
@@ -150,6 +152,7 @@
             }
 
           }
+
           .slider-btn {
             display: none;
           }
@@ -160,3 +163,84 @@
 }
 
 /* Banner CSS End */
+
+/* Detail Section CSS Start */
+.detail-section {
+  padding: 52px 0 98px;
+
+  @at-root .detail-cards {
+    @include display-flex ();
+    flex-wrap: wrap;
+
+    @at-root .card {
+      padding-bottom: 60px;
+      width: 29.85%;
+      margin-right: 5.2%;
+      margin-top: 60px;
+      position: relative;
+
+      figure {
+        position: relative;
+
+        &::before {
+          content: "\f04b";
+          width: 88px;
+          height: 88px;
+          border: 2px solid $white;
+          border-radius: 50%;
+          @include flexbox (flex, center, $justify:center);
+          @include positions (absolute,  $top:28%, $left:37%);
+          color: $white;
+          cursor: pointer;
+          font-family: "FontAwesome";
+          font-size: $large-small;
+          @include transform (translate (-50%, -50%))
+        }
+      }
+
+      @at-root .card-details {
+        padding: 24px 0 10px;
+
+        h3 {
+          color: $black;
+          font-size: $large-medium;
+          font-weight: $bold;
+          text-transform: capitalize;
+        }
+
+        p {
+          padding: 10px 0;
+          color: $grey;
+          font-size: $medium-font;
+          line-height: 1.6;
+        }
+
+        @at-root .btn {
+          padding: 14px 30px;
+          border: none;
+          border-radius: 50px;
+          @include positions (absolute, $left:0, $bottom:18px); 
+          background-color: $blue;
+          color: $white;
+          font-weight: $semi-bold;
+
+          position: absolute;
+          bottom: 18px;
+          left: 0;
+          text-transform: uppercase;
+
+          &:hover {
+            background-color: darken($blue, 15%);
+          }
+        }
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+}
+
+/* Banner Section CSS End */
