@@ -1,0 +1,151 @@
+header {
+  padding: 26px 0 18px;
+
+  .wrapper {
+    width: 92.5%;
+    @include flexbox (flex, center);
+
+    @at-root {
+      .logo {
+        max-width: 232px;
+        width: 100%;
+      }
+
+      .navbar-icons-containre {
+        width: 100%;
+        padding-left: 38px;
+        @include flexbox (flex, center, $justify:space-between);
+
+        @at-root {
+          .nav-lists {
+            @include flexbox (flex, center);
+
+            .list {
+              a {
+                padding: 13px 26px;
+                color: $darkgrey;
+                text-transform: uppercase;
+
+                &:hover {
+                  color: $blue;
+                }
+              }
+
+              &.active {
+                a {
+                  color: $blue;
+                }
+              }
+            }
+          }
+
+          .icons-language-block {
+            @include flexbox (flex, center, $direction:column);
+
+            @at-root .social-icons {
+              @include flexbox (flex, center);
+
+              .icon {
+                margin-right: 15px;
+
+                a {
+                  text-indent: -99999px;
+
+                  &::before {
+                    width: 26px;
+                    height: 26px;
+                    border: 1px solid $grey;
+                    border-radius: 50%;
+                    @include flexbox (flex, center, $justify:center);
+                    float: left;
+                    @include icons ('', $grey, 15px);
+                    text-indent: 0;
+                  }
+                }
+
+                &:last-child {
+                  margin-right: 0;
+                }
+              }
+
+              @include icons-content ($social-icons)
+            }
+
+            @at-root .language {
+              padding: 10px 0;
+
+              .english-lang {
+                font-size: $small;
+                color: $grey;
+
+                &.active {
+                  color: $darkgrey;
+                }
+
+              }
+
+              .spanish-lang {
+                @extend .english-lang;
+
+                &::before {
+                  content: "/";
+                  margin-right: 5px;
+                }
+              }
+            }
+          }
+
+          .hamburger {
+            width: 45px;
+            height: 45px;
+            border-radius: 2px;
+            display: none;
+            @include positions(relative, 4);
+            background-color: transparent;
+            cursor: pointer;
+
+            .bar {
+              width: 75%;
+              height: 2px;
+              border-radius: 5px;
+              @include positions(absolute, $left: 30%);
+              background: $grey;
+              text-indent: -99999px;
+              @include transition (.5s);
+
+              &:nth-child(1) {
+                top: 40%;
+              }
+
+              &:nth-child(2) {
+                top: 50%;
+              }
+
+              &:nth-child(3) {
+                width: 50%;
+                margin-left: auto;
+                top: 62%;
+              }
+            }
+
+            &.active {
+              .bar {
+                &:nth-child(1) {
+                  @include transform (translateY(2px) rotate(-45deg));
+                }
+
+                &:nth-child(2) {
+                  opacity: 0;
+                }
+
+                &:nth-child(3) {
+                  @include transform (translateY(-7px) rotate(45deg));
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

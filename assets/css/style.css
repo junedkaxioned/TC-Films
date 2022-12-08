@@ -1,0 +1,307 @@
+/* Reset CSS */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html {
+  overflow-y: scroll;
+}
+
+/* Align radios and text inputs with their label */
+input[type=radio] {
+  vertical-align: text-bottom;
+}
+
+/* Hand cursor on clickable input elements */
+label,
+input[type=button],
+input[type=submit],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em {
+  font-style: italic;
+}
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup {
+  top: -0.7em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* 1.2. Clear Fix ========================== */
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/* for wrapper */
+.wrapper {
+  max-width: 1360px;
+  width: 86%;
+  margin: 0 auto;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+html.stop-scroll {
+  overflow: hidden;
+}
+
+.d-none {
+  display: none;
+}
+
+header {
+  padding: 26px 0 18px;
+}
+header .wrapper {
+  width: 92.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.logo {
+  max-width: 232px;
+  width: 100%;
+}
+
+.navbar-icons-containre {
+  width: 100%;
+  padding-left: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.nav-lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.nav-lists .list a {
+  padding: 13px 26px;
+  color: #47484B;
+  text-transform: uppercase;
+}
+.nav-lists .list a:hover {
+  color: #3FADF2;
+}
+.nav-lists .list.active a {
+  color: #3FADF2;
+}
+
+.icons-language-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.social-icons .icon {
+  margin-right: 15px;
+}
+.social-icons .icon a {
+  text-indent: -99999px;
+}
+.social-icons .icon a::before {
+  width: 26px;
+  height: 26px;
+  border: 1px solid #979799;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  float: left;
+  content: "";
+  color: #979799;
+  font-family: "FontAwesome";
+  font-size: 15px;
+  text-indent: 0;
+}
+.social-icons .icon:last-child {
+  margin-right: 0;
+}
+.social-icons li:nth-child(1) a::before {
+  content: "\f39e";
+}
+.social-icons li:nth-child(2) a::before {
+  content: "\f167";
+}
+.social-icons li:nth-child(3) a::before {
+  content: "\f099";
+}
+
+.language {
+  padding: 10px 0;
+}
+.language .english-lang, .language .spanish-lang {
+  font-size: 14px;
+  color: #979799;
+}
+.language .english-lang.active, .language .active.spanish-lang {
+  color: #47484B;
+}
+.language .spanish-lang::before {
+  content: "/";
+  margin-right: 5px;
+}
+
+.hamburger {
+  width: 45px;
+  height: 45px;
+  border-radius: 2px;
+  display: none;
+  position: relative;
+  z-index: 4;
+  background-color: transparent;
+  cursor: pointer;
+}
+.hamburger .bar {
+  width: 75%;
+  height: 2px;
+  border-radius: 5px;
+  position: absolute;
+  left: 30%;
+  background: #979799;
+  text-indent: -99999px;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.hamburger .bar:nth-child(1) {
+  top: 40%;
+}
+.hamburger .bar:nth-child(2) {
+  top: 50%;
+}
+.hamburger .bar:nth-child(3) {
+  width: 50%;
+  margin-left: auto;
+  top: 62%;
+}
+.hamburger.active .bar:nth-child(1) {
+  -webkit-transform: translateY(2px) rotate(-45deg);
+  -ms-transform: translateY(2px) rotate(-45deg);
+  transform: translateY(2px) rotate(-45deg);
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(3) {
+  -webkit-transform: translateY(-7px) rotate(45deg);
+  -ms-transform: translateY(-7px) rotate(45deg);
+  transform: translateY(-7px) rotate(45deg);
+}
+
+/*# sourceMappingURL=style.css.map */
