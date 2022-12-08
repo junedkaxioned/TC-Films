@@ -596,5 +596,214 @@ header .wrapper {
 }
 
 /* Banner Section CSS End */
+footer {
+  background-color: #E0E0E1;
+}
+footer .wrapper {
+  width: 92.5%;
+}
+.top-footer {
+  padding: 38px 0 30px;
+  border-bottom: 2px solid #bebebf;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.footer-logos {
+  width: 22.2%;
+  padding: 10px 55px 10px 0;
+  border-right: 2px solid #bebebf;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.footer-logos span {
+  padding: 20px 0;
+  display: block;
+  color: #38393D;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.menu-links {
+  width: 29.5%;
+  padding: 0 65px;
+  border-right: 2px solid #bebebf;
+}
+.menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+.menu-list .list {
+  width: 50%;
+}
+.menu-list .list a {
+  padding: 10px 0;
+  color: #47484B;
+  font-size: 14px;
+}
+.menu-list .list a:hover {
+  color: #3FADF2;
+}
+.menu-list .list.active a {
+  color: #3FADF2;
+}
+
+.footer-social-block {
+  width: 22.8%;
+  padding: 0 70px;
+  border-right: 2px solid #bebebf;
+}
+.footer-social-block h4 {
+  color: #47484B;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.footer-social-icons {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.footer-social-icons .icon a {
+  padding: 5px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #47484B;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+.footer-social-icons .icon a::before {
+  width: 26px;
+  height: 26px;
+  border: 1px solid #979799;
+  border-radius: 50%;
+  margin-right: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  float: left;
+  content: "";
+  color: #979799;
+  font-family: "FontAwesome";
+  font-size: 15px;
+}
+.footer-social-icons li:nth-child(1) a::before {
+  content: "\f39e";
+}
+.footer-social-icons li:nth-child(2) a::before {
+  content: "\f167";
+}
+.footer-social-icons li:nth-child(3) a::before {
+  content: "\f099";
+}
+
+.contact-block {
+  width: 25%;
+  padding: 0 0 0 70px;
+}
+.contact-block h4 {
+  color: #47484B;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.contact-block p {
+  padding: 16px 0 8px;
+  color: #979799;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.contact-block a {
+  color: #47484B;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.contact-block a::before {
+  content: "\f0e0";
+  width: 26px;
+  height: 26px;
+  border: 1px solid #979799;
+  border-radius: 50%;
+  margin-right: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  float: left;
+  font-family: "FontAwesome";
+  color: #979799;
+}
+
+.bottom-footer {
+  padding: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.terms-privacy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.terms-privacy .list {
+  margin-right: 30px;
+}
+.terms-privacy .list a {
+  color: #47484B;
+  font-size: 12px;
+}
+.terms-privacy .list a:hover {
+  color: #3FADF2;
+}
+
+.copyright-para {
+  color: #47484B;
+  font-size: 12px;
+}
 
 /*# sourceMappingURL=style.css.map */
