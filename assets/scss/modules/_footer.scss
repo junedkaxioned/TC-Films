@@ -1,0 +1,332 @@
+footer {
+  background-color: $lightgrey;
+
+  .wrapper {
+    width: 92.5%;
+
+    @at-root {
+
+      .top-footer {
+        padding: 38px 0 30px;
+        border-bottom: 2px solid lighten($grey, 15%);
+        @include flexbox (flex);
+
+        @at-root .footer-logos {
+          width: 22.2%;
+          padding: 10px 55px 10px 0;
+          border-right: 2px solid lighten($grey, 15%);
+
+          @include flexbox (flex, center, $direction:column, $justify:center);
+
+          span {
+            padding: 20px 0;
+            display: block;
+            color: $black;
+            font-size: $small;
+            font-weight: $bold;
+          }
+        }
+
+        @at-root .menu-links {
+          width: 29.5%;
+          padding: 0 65px;
+          border-right: 2px solid lighten($grey, 15%);
+
+          @at-root .menu-list {
+            @include flexbox (flex);
+            flex-wrap: wrap;
+
+            .list {
+              width: 50%;
+
+              a {
+                padding: 10px 0;
+                color: $darkgrey;
+                font-size: $small;
+              }
+
+              &.active {
+                a {
+                  color: $blue;
+                }
+              }
+            }
+
+          }
+
+        }
+
+        @at-root .footer-social-block {
+          width: 22.8%;
+          padding: 0 70px;
+          border-right: 2px solid lighten($grey, 15%);
+
+          h4 {
+            color: $darkgrey;
+            font-weight: $semi-bold;
+            text-transform: capitalize;
+          }
+
+          @at-root .footer-social-icons {
+            margin-top: 10px;
+            @include flexbox (flex, $direction:column);
+
+            .icon {
+              a {
+                padding: 5px 0;
+                @include flexbox (flex, center);
+                color: $darkgrey;
+                font-size: $small;
+                text-transform: capitalize;
+
+                &::before {
+                  width: 26px;
+                  height: 26px;
+                  border: 1px solid $grey;
+                  border-radius: 50%;
+                  margin-right: 18px;
+                  @include flexbox (flex, center, $justify:center);
+                  float: left;
+                  @include icons ('', $grey, 15px);
+                }
+              }
+            }
+
+            @include icons-content ($social-icons);
+
+          }
+        }
+
+        @at-root .contact-block {
+          width: 25%;
+          padding: 0 0 0 70px;
+
+          h4 {
+            color: $darkgrey;
+            font-weight: $semi-bold;
+            text-transform: capitalize;
+          }
+
+          p {
+            padding: 16px 0 8px;
+            color: $grey;
+            font-size: $small;
+            line-height: 1.6;
+          }
+
+          a {
+            color: $darkgrey;
+            font-size: $small;
+            @include flexbox (flex, center);
+
+            &::before {
+              content: "\f0e0";
+              width: 26px;
+              height: 26px;
+              border: 1px solid $grey;
+              border-radius: 50%;
+              margin-right: 18px;
+              @include flexbox (flex, center, $justify:center);
+              float: left;
+              font-family: "FontAwesome";
+              color: $grey;
+            }
+          }
+        }
+      }
+
+      .bottom-footer {
+        padding: 30px 0;
+        @include flexbox (flex, center, $justify:space-between);
+
+        @at-root .terms-privacy {
+          @include flexbox (flex, center);
+
+          .list {
+            margin-right: 30px;
+
+            a {
+              color: $darkgrey;
+              font-size: $extra-small;
+            }
+          }
+        }
+
+        @at-root .copyright-para {
+          color: $darkgrey;
+          font-size: $extra-small;
+        }
+      }
+    }
+  }
+
+  /* Hover Effects Media Query Start */
+
+  @include responsiveMin (995px) {
+    @at-root .menu-list {
+      .list {
+        a {
+          &:hover {
+            color: $blue;
+          }
+        }
+      }
+    }
+
+    @at-root .footer-social-icons {
+      .icon {
+        a {
+          &:hover {
+            color: $blue;
+          }
+
+          &:hover::before {
+            border-color: $blue;
+            background-color: $blue;
+            color: $white;
+          }
+        }
+      }
+    }
+
+    @at-root .contact-block {
+      a {
+        &:hover {
+          color: $blue;
+        }
+
+        &:hover::before {
+          border-color: $blue;
+          background-color: $blue;
+          color: $white;
+        }
+      }
+    }
+
+    @at-root .terms-privacy {
+      a {
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+  }
+
+  @include responsiveMinMax (768px, 1280px) {
+    @at-root .top-footer {
+      .menu-links {
+        padding: 0 30px;
+      }
+
+      .footer-social-block {
+        padding: 0 30px;
+      }
+      .contact-block {
+        padding-left: 30px;
+      }
+    }
+  }
+
+  @include responsiveMinMax (480px, 995px) {
+    @at-root .top-footer {
+      @at-root {
+
+      .footer-logos {
+        padding-right: 15px;
+      }
+
+      .menu-links {
+        padding: 0 15px;
+      }
+
+      .footer-social-block {
+        padding: 0 15px;
+      }
+      .contact-block {
+        padding-left: 15px;
+      }
+    }}
+  }
+
+  @include responsiveMax (768px) {
+    .top-footer {
+      @include flex-wrap (wrap);
+      @at-root {
+
+      
+      .footer-logos {
+        width: 50%;
+        margin-bottom: 35px;
+      }
+
+      .menu-links {
+        width: 50%;
+        border: none;
+        margin-bottom: 35px;
+      }
+
+      .footer-social-block {
+        width: 50%;
+      }
+      .contact-block {
+        width: 50%;
+      }
+    }}
+  }
+  @include responsiveMax (480px) {
+    text-align: center;
+    .top-footer {
+      @include flex-wrap (wrap);
+
+      @at-root {
+
+      .footer-logos {
+        width: 100%;
+        padding-right: 0;
+        padding-bottom: 35px;
+        border-right: none;
+        border-bottom: 2px solid lighten($grey, 15%);
+      }
+
+      .menu-links {
+        width: 100%;
+        border: none;
+        padding-bottom: 35px;
+        border-right: none;
+        border-bottom: 2px solid lighten($grey, 15%);
+      }
+
+      .footer-social-block {
+        width: 100%;
+        padding-bottom: 35px;
+        border-right: none;
+        border-bottom: 2px solid lighten($grey, 15%);
+
+        @at-root .footer-social-icons {
+          @include flex-direction (row);
+          @include justify-content (center);
+            .icon {
+              padding-top: 15px;
+            a {
+              text-indent: -99999px;
+              &::before {
+                text-indent: 0;
+              }
+            }
+             
+          }
+        }
+      }
+      .contact-block {
+        width: 100%;
+        padding-left: 0;
+        padding-top: 35px;
+
+      }
+    }}
+  }
+
+
+  /* Hover Effects Media Query End */
+
+}

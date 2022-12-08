@@ -2,15 +2,15 @@
 $white: #F0F0F0;
 $lightgrey: #E0E0E1;
 $grey: #979799;
-$drakgrey: #47484B;
+$darkgrey: #47484B;
 $black: #38393D;
 $blue: #3FADF2;
 
 
 // Font Variable
-$extra-large: 64px;
+$extra-large: 68px;
 $large: 52px;
-$large-medium: 48px;
+$large-medium: 38px;
 $large-small: 32px;
 $medium-large: 24px;
 $medium-small: 22px;
@@ -27,3 +27,9 @@ $semi-bold: 600;
 $bold: 700;
 $extra-bold: 800;
 $bold-black: 900;
+
+// Common Social Icons
+$social-icons: (1:"\f39e", 2:"\f167", 3:"\f099");
+
+// Banner Icons
+$banner-icons: (1:"\f39e", 2:"\f099", 3:"\f232", 4:"\2b");

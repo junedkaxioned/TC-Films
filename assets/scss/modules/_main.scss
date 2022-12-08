@@ -1,0 +1,361 @@
+/* Banner CSS Start */
+.banner-section {
+  .wrapper {
+    width: 100%;
+    @include display-flex ();
+
+    @at-root {
+
+      // Banner Slider
+      .banner-sliders {
+        width: 77%;
+
+        .slider {
+          height: 100%;
+          position: relative;
+
+          &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: rgba(0, 0, 0, .3);
+          }
+
+          figure {
+            height: 100%;
+            position: relative;
+
+            &::before {
+              content: "\f04b";
+              width: 88px;
+              height: 88px;
+              border: 2px solid $white;
+              border-radius: 50%;
+              @include flexbox (flex, center, $justify:center);
+              @include positions (absolute, 1, $top:42.5%, $left:45.8%);
+              color: $white;
+              cursor: pointer;
+              font-family: "FontAwesome";
+              font-size: $large-small;
+              @include transform (translate (-50%, -50%))
+            }
+          }
+        }
+
+        @at-root .banner-content {
+          width: 100%;
+          height: 100%;
+          padding: 80px 40px 40px 75px;
+          @include positions (absolute, $top:0, $left:0);
+
+          h2 {
+            color: $white;
+            font-size: $extra-large;
+            font-weight: $bold;
+          }
+
+          p {
+            padding: 35px 0;
+            color: $white;
+            max-width: 380px;
+            width: 100%;
+            font-size: 20px;
+            line-height: 1.6;
+          }
+        }
+
+        @at-root .banner-social-icons {
+          @include flexbox (flex, center);
+          @include positions (absolute, $bottom:10%, $right:4%);
+
+          span {
+            margin-right: 20px;
+            color: $white;
+            font-size: $normal-large;
+          }
+
+          @at-root .banner-icons {
+            @include flexbox (flex, center);
+
+            .icon {
+              margin-right: 16px;
+
+              a {
+                text-indent: -99999px;
+
+                &::before {
+                  width: 26px;
+                  height: 26px;
+                  border: 1px solid $white;
+                  border-radius: 50%;
+                  @include flexbox (flex, center, $justify:center);
+                  float: left;
+                  @include icons ('', $white, 15px);
+                  text-indent: 0;
+                }
+              }
+
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+
+            @include icons-content ($banner-icons);
+          }
+        }
+      }
+
+      // Aside Container
+      .aside-container {
+        width: 23%;
+        background-color: $darkgrey;
+
+        @at-root {
+          .aside-sliders {
+            max-height: 583px;
+            width: 100%;
+            padding: 14px;
+            @include flexbox (flex, center, $direction:column);
+            overflow-y: scroll;
+
+            .slider {
+              margin-bottom: 14px;
+              cursor: pointer;
+
+              figure {
+                position: relative;
+
+                &::before {
+                  content: "\f04b";
+                  width: 56px;
+                  height: 56px;
+                  border: 2px solid $white;
+                  border-radius: 50%;
+                  @include flexbox (flex, center, $justify:center);
+                  @include positions (absolute, $top:30%, $left:40%);
+                  color: $white;
+                  font-family: "FontAwesome";
+                  font-size: $large-small;
+                  @include transform (translate (-50%, -50%));
+                }
+
+                &::before {
+                  display: none;
+                }
+              }
+
+            }
+
+            &::-webkit-scrollbar {
+              width: 5px;
+              height: 5px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+              background-color: $grey;
+            }
+
+          }
+
+          .slider-btn {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  /*  Media Query Start */
+  @include responsiveMax (768px) {
+    .wrapper {
+      @include flex-direction (column);
+      
+      @at-root .banner-sliders {
+        width: 100%;
+
+        @at-root .banner-content {
+          padding: 35px 30px 40px 60px;
+          position: relative;
+           background-color: $white;
+          h2 {
+            color: $black;
+          }
+
+          p {
+            color: $black;
+          }
+
+          @at-root .banner-social-icons {
+            span { color: $black;}
+
+            .banner-icons {
+              .icon {
+                a {
+                 &::before {
+                  border-color: $grey;
+                  color: $grey;
+                 }
+                }
+              }
+            }
+          }
+        
+        } 
+      }
+
+      @at-root .aside-container {
+        width: 100%;
+        @at-root .aside-sliders {
+         @include flex-direction (row);
+         overflow: hidden;
+          
+         .slider {
+          margin-right: 10px;
+          margin-bottom: 0;
+         }
+        }
+      }
+    }
+  }
+
+  @include responsiveMax (480px) {
+    @at-root .banner-content { 
+      h2 {
+        font-size: $large;
+      }
+    }
+  }
+  /*  Media Query End */
+
+}
+
+/* Banner CSS End */
+
+/* Detail Section CSS Start */
+.detail-section {
+  padding: 52px 0 98px;
+
+  @at-root .detail-cards {
+    @include display-flex ();
+    flex-wrap: wrap;
+
+    @at-root .card {
+      padding-bottom: 60px;
+      width: 29.85%;
+      margin-right: 5.2%;
+      margin-top: 60px;
+      position: relative;
+
+      figure {
+        position: relative;
+
+        &::before {
+          content: "\f04b";
+          width: 88px;
+          height: 88px;
+          border: 2px solid $white;
+          border-radius: 50%;
+          @include flexbox (flex, center, $justify:center);
+          @include positions (absolute, $top:28%, $left:37%);
+          color: $white;
+          cursor: pointer;
+          font-family: "FontAwesome";
+          font-size: $large-small;
+          @include transform (translate (-50%, -50%))
+        }
+      }
+
+      @at-root .card-details {
+        padding: 24px 0 10px;
+
+        h3 {
+          color: $black;
+          font-size: $large-medium;
+          font-weight: $bold;
+          text-transform: capitalize;
+        }
+
+        p {
+          padding: 10px 0;
+          color: $grey;
+          font-size: $medium-font;
+          line-height: 1.6;
+        }
+
+        @at-root .btn {
+          padding: 14px 30px;
+          border: none;
+          border-radius: 50px;
+          @include positions (absolute, $left:0, $bottom:18px);
+          background-color: $blue;
+          color: $white;
+          font-weight: $semi-bold;
+          text-transform: uppercase;
+        }
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  /* Hover Effects Media Query Start */
+  @include responsiveMin (995px) {
+    @at-root .aside-sliders {
+      .slider {
+        &:hover {
+          figure {
+            &::before {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+
+    @at-root .banner-icons {
+      .icon {
+        a {
+          &:hover::before {
+            border-color: $blue;
+            background-color: $blue;
+          }
+        }
+      }
+    }
+
+    @at-root .btn {
+      &:hover {
+        background-color: darken($blue, 15%);
+      }
+    }
+  }
+
+  /* Hover Effects Media Query End */
+  @include responsiveMax (995px) {
+   @at-root .detail-cards {
+    .card {
+      width: 44.5%;
+      
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+      &:nth-child(3n) {
+        margin-right: 5.2%;
+      }
+    }
+   }
+  }
+  @include responsiveMax (767px) {
+    @at-root .detail-cards {
+     .card {
+       width: 100%;
+       margin-right: 0;
+     }
+    }
+   }
+  /*  Media Query End */
+}
+
+/* Banner Section CSS End */
