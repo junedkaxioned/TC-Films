@@ -182,6 +182,50 @@ header {
 
   /* Hover Effects Media Query End */
 
+
+  /*  Media Query Start */
+  @include responsiveMinMax (995px, 1280px) {
+    @at-root .logo {
+      max-width: 200px;
+    }
+
+    @at-root .nav-lists {
+      .list {
+        a {
+          padding: 13px 15px;
+        }
+      }
+    }
+  }
+
+  @include responsiveMinMax (768px, 995px) {
+    @at-root .logo {
+      max-width: 135px;
+    }
+
+    @at-root .nav-lists {
+      .list {
+        a {
+          padding: 12px;
+          font-size: $extra-small;
+        }
+      }
+    }
+  }
+
+  @include responsiveMax (768px) {
+    .navbar-icons-containre {
+      display: none;
+    }
+
+    .hamburger {
+      margin-left: auto;
+      display: block;
+    }
+  }
+
+  /*  Media Query End */
+
 }
 
 /* Header CSS End */

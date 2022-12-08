@@ -165,6 +165,68 @@
       }
     }
   }
+  /*  Media Query Start */
+  @include responsiveMax (768px) {
+    .wrapper {
+      @include flex-direction (column);
+      
+      @at-root .banner-sliders {
+        width: 100%;
+
+        @at-root .banner-content {
+          padding: 35px 30px 40px 60px;
+          position: relative;
+           background-color: $white;
+          h2 {
+            color: $black;
+          }
+
+          p {
+            color: $black;
+          }
+
+          @at-root .banner-social-icons {
+            span { color: $black;}
+
+            .banner-icons {
+              .icon {
+                a {
+                 &::before {
+                  border-color: $grey;
+                  color: $grey;
+                 }
+                }
+              }
+            }
+          }
+        
+        } 
+      }
+
+      @at-root .aside-container {
+        width: 100%;
+        @at-root .aside-sliders {
+         @include flex-direction (row);
+         overflow: hidden;
+          
+         .slider {
+          margin-right: 10px;
+          margin-bottom: 0;
+         }
+        }
+      }
+    }
+  }
+
+  @include responsiveMax (480px) {
+    @at-root .banner-content { 
+      h2 {
+        font-size: $large;
+      }
+    }
+  }
+  /*  Media Query End */
+
 }
 
 /* Banner CSS End */
@@ -271,7 +333,29 @@
   }
 
   /* Hover Effects Media Query End */
-
+  @include responsiveMax (995px) {
+   @at-root .detail-cards {
+    .card {
+      width: 44.5%;
+      
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+      &:nth-child(3n) {
+        margin-right: 5.2%;
+      }
+    }
+   }
+  }
+  @include responsiveMax (767px) {
+    @at-root .detail-cards {
+     .card {
+       width: 100%;
+       margin-right: 0;
+     }
+    }
+   }
+  /*  Media Query End */
 }
 
 /* Banner Section CSS End */

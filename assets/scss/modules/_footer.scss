@@ -212,6 +212,121 @@ footer {
     }
   }
 
+  @include responsiveMinMax (768px, 1280px) {
+    @at-root .top-footer {
+      .menu-links {
+        padding: 0 30px;
+      }
+
+      .footer-social-block {
+        padding: 0 30px;
+      }
+      .contact-block {
+        padding-left: 30px;
+      }
+    }
+  }
+
+  @include responsiveMinMax (480px, 995px) {
+    @at-root .top-footer {
+      @at-root {
+
+      .footer-logos {
+        padding-right: 15px;
+      }
+
+      .menu-links {
+        padding: 0 15px;
+      }
+
+      .footer-social-block {
+        padding: 0 15px;
+      }
+      .contact-block {
+        padding-left: 15px;
+      }
+    }}
+  }
+
+  @include responsiveMax (768px) {
+    .top-footer {
+      @include flex-wrap (wrap);
+      @at-root {
+
+      
+      .footer-logos {
+        width: 50%;
+        margin-bottom: 35px;
+      }
+
+      .menu-links {
+        width: 50%;
+        border: none;
+        margin-bottom: 35px;
+      }
+
+      .footer-social-block {
+        width: 50%;
+      }
+      .contact-block {
+        width: 50%;
+      }
+    }}
+  }
+  @include responsiveMax (480px) {
+    text-align: center;
+    .top-footer {
+      @include flex-wrap (wrap);
+
+      @at-root {
+
+      .footer-logos {
+        width: 100%;
+        padding-right: 0;
+        padding-bottom: 35px;
+        border-right: none;
+        border-bottom: 2px solid lighten($grey, 15%);
+      }
+
+      .menu-links {
+        width: 100%;
+        border: none;
+        padding-bottom: 35px;
+        border-right: none;
+        border-bottom: 2px solid lighten($grey, 15%);
+      }
+
+      .footer-social-block {
+        width: 100%;
+        padding-bottom: 35px;
+        border-right: none;
+        border-bottom: 2px solid lighten($grey, 15%);
+
+        @at-root .footer-social-icons {
+          @include flex-direction (row);
+          @include justify-content (center);
+            .icon {
+              padding-top: 15px;
+            a {
+              text-indent: -99999px;
+              &::before {
+                text-indent: 0;
+              }
+            }
+             
+          }
+        }
+      }
+      .contact-block {
+        width: 100%;
+        padding-left: 0;
+        padding-top: 35px;
+
+      }
+    }}
+  }
+
+
   /* Hover Effects Media Query End */
 
 }
